@@ -3,7 +3,7 @@ from dotenv.main import load_dotenv
 
 load_dotenv()
 
-BOT_TOKEN = "MTAyMDc2ODA2NDY3OTIwMjk5Nw.Gwrc7f.TwDzv8uhnAdX-NW6db3LnxvWlJAITLngvF7U5k"
+BOT_TOKEN = "MTAyMDc2ODA2NDY3OTIwMjk5Nw.GmHotQ.R6BtbsVuEnByYpdfSs_lquvd6v8uwDbfX2SiOA"
 
 PREFIX = "!"
 BOT_NAME = "Bulldog Rocketry Discord Bot"

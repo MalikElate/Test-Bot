@@ -10,9 +10,9 @@ class Everyone(commands.Cog, name="everyone"):
 
     @commands.Cog.listener()
     async def on_message(self, message):
-        print("messsage", message.author)
+        print("message", message)
         if message.mention_everyone and message.channel.id != 1029069634319700069:
-            warningMessage = message.author.name
+            warningMessage = f"""Hi {message.author.name}, \n\nserver policy is announcements should be sent in the announcements channel, without the \u2728@everyone\u2728 tag. \nThank you, \nInternal Tools\n\n Here is the message to copy and send in announcements \n {message.content}"""
             await message.delete(delay=None)
             await message.author.send(content=warningMessage)
     
