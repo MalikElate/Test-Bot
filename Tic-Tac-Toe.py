@@ -109,4 +109,4 @@ bot = commands.Bot(command_prefix="!", intents=intents)
 async def tic(ctx: commands.Context):
     await ctx.send('Tic Tac Toe: X goes first', view=TicTacToe())
 
-bot.run("MTAwNTU3MTI1NDM4MTcxMTM2MA.GtKY8F.JTg4cABk6tO6TRz9x2fCp8C434ER6N144OAdos")
+bot.run("MTAyMDc2ODA2NDY3OTIwMjk5Nw.GI4oAn.G8mbDu8AVSoJRECXIl46yaJm-jrMOF_83YljYA")

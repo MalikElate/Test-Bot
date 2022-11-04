@@ -1,6 +1,6 @@
 import nextcord
 import os
-from dotenv import load_dotenv
+from dotenv import load_dotenv, find_dotenv
 from nextcord.ext import commands
 from config import *
 
@@ -11,17 +11,18 @@ def main():
 
     bot = commands.Bot(command_prefix="!", intents=intents)
 
-    load_dotenv()
+    # temp = dotenv_values(".env")
+    load_dotenv(find_dotenv())
     
     @bot.event
     async def on_ready():
         print("Rocketry Bot is Online")
-
+    
     for folder in os.listdir("modules"):
         if os.path.exists(os.path.join("modules", folder, "cog.py")):
             bot.load_extension(f"modules.{folder}.cog")
 
-    bot.run("MTAwNTU3MTI1NDM4MTcxMTM2MA.GtKY8F.JTg4cABk6tO6TRz9x2fCp8C434ER6N144OAdos")
+    bot.run(BOT_TOKEN)
 
 if __name__ == '__main__':
     main()
